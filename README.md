@@ -1,21 +1,58 @@
-#  ANPR Traffic Violation System
+#  ANPR Traffic Violation Detection System
 
-Automatic Number Plate Recognition (ANPR) system that detects vehicle plates from images, extracts text using OCR, applies traffic violation rules, logs to database, and automatically sends fine notifications via email.
+An end-to-end Automatic Number Plate Recognition (ANPR) system that detects vehicle license plates from images, extracts plate text using OCR, applies traffic violation rules, logs events into a database, and automatically sends fine notification emails.
 
-This project demonstrates an end-to-end ML + Backend + UI pipeline.
+This project demonstrates a production-style ML + backend + automation pipeline similar to real-world smart traffic enforcement systems.
+
+---
+
+##  Problem Statement
+
+Manual traffic monitoring is slow, error-prone, and difficult to scale.
+
+This project simulates an automated system that:
+
+- Detects vehicle plates
+- Reads text using OCR
+- Applies violation rules
+- Logs records into a database
+- Sends automated fine notifications
+
+The goal is to build a **complete ML system**, not just a model.
+
+---
+
+##  System Architecture
+
+```
+Image Upload
+     ↓
+YOLOv8 Plate Detection
+     ↓
+OCR Text Extraction
+     ↓
+Violation Decision Engine
+     ↓
+Database Logging
+     ↓
+Automatic Email Notification
+```
+
+Each module is isolated and modular, allowing independent scaling.
 
 ---
 
 ##  Features
 
 - YOLOv8 license plate detection
-- OCR plate text extraction
-- Traffic fine rule engine
+- OCR plate text recognition
+- Rule-based fine engine
 - FastAPI backend API
-- Streamlit demo UI
+- Streamlit demo interface
 - MySQL database logging
-- Automatic email notification
-- Model performance report generation
+- Automated email notifications
+- Model performance reporting
+- End-to-end pipeline integration
 
 ---
 
@@ -48,7 +85,7 @@ reports/    → Model performance report
 
 ##  Setup Instructions
 
-### 1. Clone repo
+### 1. Clone repository
 
 ```
 git clone <your_repo_link>
@@ -84,13 +121,13 @@ SMTP_PASS=your_app_password
 
 ---
 
-##  Run Backend
+##  Run Backend API
 
 ```
-uvicorn app.main:app --reload
+uvicorn app.api.main:app --reload
 ```
 
-API runs at:
+API available at:
 
 ```
 http://127.0.0.1:8000
@@ -98,32 +135,36 @@ http://127.0.0.1:8000
 
 ---
 
-##  Run UI Demo
+##  Run Demo UI
 
 ```
-streamlit run app/ui.py
+streamlit run app/ui/streamlit_app.py
 ```
 
-Upload image → detection → email fine
+Upload image → detection → fine → email notification
 
 ---
 
 ##  Model Performance
 
-See `reports/ANPR_Model_Report.pdf`
+See report:
+
+```
+reports/ANPR_Model_Report.pdf
+```
 
 Includes:
 
 - mAP metrics
 - Confusion matrix
-- Precision-Recall curve
-- Training loss
+- Precision–Recall curve
+- Training loss graph
 
 ---
 
 ##  Email Demo Mode
 
-All fines are sent to demo email configured in `.env`.
+All detected violations automatically send a fine notice to the configured demo email.
 
 ---
 
@@ -139,19 +180,29 @@ Smart traffic enforcement system for:
 
 ---
 
+##  Future Improvements
+
+- Real-time CCTV integration
+- Multi-vehicle tracking
+- Cloud deployment
+- Payment gateway integration
+- Mobile app support
+
+---
+
 ##  Author
 
 ANPR Project — Machine Learning + Backend Integration Demo
 
 ---
 
-##  Future Improvements
+##  Key Learning Outcomes
 
-- Real-time CCTV integration
-- Mobile deployment
-- Multi-vehicle tracking
-- Cloud hosting
-- Payment gateway integration
+- End-to-end ML pipeline design
+- Detection + OCR integration
+- Backend API engineering
+- Database automation
+- System architecture thinking
+- Production-style ML deployment
 
 ---
-
