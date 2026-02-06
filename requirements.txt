@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+streamlit
+opencv-python
+numpy
+pillow
+easyocr
+pytesseract
+python-multipart
+mysql-connector-python
+python-dotenv
+google-generativeai
+ultralytics
