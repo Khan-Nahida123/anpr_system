@@ -187,13 +187,6 @@ Smart traffic enforcement system for:
 - Cloud deployment
 - Payment gateway integration
 - Mobile app support
-
----
-
-##  Author
-
-ANPR Project — Machine Learning + Backend Integration Demo
-
 ---
 
 ##  Key Learning Outcomes
@@ -206,3 +199,7 @@ ANPR Project — Machine Learning + Backend Integration Demo
 - Production-style ML deployment
 
 ---
+##  Author
+
+Khan Nahida
+ANPR Project — Machine Learning + Backend Integration Demo
